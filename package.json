@@ -1,5 +1,5 @@
 {
-  "name": "mini-react",
+  "name": "mini-react-example",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,10 +9,15 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+
+
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "^4.0.3"
+  },
+  "devDependencies": {
+    "my-dev-dependency": "1.0.0.6"
   },
   "browserslist": {
     "production": [
