@@ -1,0 +1,22 @@
+ul.navigation {
+    padding: 0;
+    text-align: center;
+}
+.navigation li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 2px 5px;
+}
+.navigation a {
+    color: black;
+    text-decoration: none;
+    border: 1px solid paleturquoise;
+    background: powderblue;
+    border-radius: 3px;
+    min-width: 80px;
+    display: inline-block;
+}
+.navigation a.active {
+    color: darkmagenta;
+    background: lightcyan;
+}

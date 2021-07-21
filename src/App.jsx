@@ -1,37 +1,33 @@
-import { useState } from 'react';
+import { Route, Switch } from 'react-router-dom';
+import Navigation from './components/Navigation';
+import Home from './pages/Home';
+import Contact from './pages/Contact';
+import Error from './pages/Error';
+import About from './pages/About';
 
 export default function App() {
-    return <ClickCounter />
+  return (
+    <div>
+      <h1>App!!!!</h1>
+      <Navigation />
+      <Switch>
+        {/* Regular path; matches /contact and /contact/us for example */}
+        <Route path="/contact">
+          <Contact />
+        </Route>
+        {/* Regular path */}
+        <Route path="/about">
+          <About />
+        </Route>
+        {/* Exact path, matches only exactly the root */}
+        <Route exact path="/">
+          <Home/>
+        </Route>
+        {/* Wildcard path; matches anything! */}
+        <Route path="*">
+          <Error/>
+        </Route>
+      </Switch>
+    </div>
+  );
 }
-
-function ClickCounter() {
-    // Array destructuring used here
-    // const [counter, setCount] = useState(0);
-
-    const resultOfUseState = useState(777);
-    const counter = resultOfUseState[0];
-    const setCount = resultOfUseState[1];
-
-    return <button onClick={() => setCount(counter + 1)}>
-        Click {counter} times
-    </button>
-}
-
-
-
-
-
-
-
-
-// export default function App() {
-//     return <LuckyNumbersList numbers={[4,5,9,10]} />
-// }
-
-// function LuckyNumbersList({ numbers }) {
-//     return numbers.map(n => <Number out={n} add="HI" />)
-// }
-
-// function Number({ out, add }) {
-//     return <button>{out} {add}</button>
-// }
