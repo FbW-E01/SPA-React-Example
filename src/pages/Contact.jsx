@@ -1,3 +1,4 @@
-export default function Contact() {
-    return "This is the Contact page";
+export default function Contact(props) {
+    console.log(props);
+    return "This is the Contact page!!!!";
 }
